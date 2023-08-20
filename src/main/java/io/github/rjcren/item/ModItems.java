@@ -19,13 +19,14 @@ import net.minecraftforge.registries.RegistryObject;
  */
 
 //物品类
+@Mod(PortalGunMod.MODID)
 public class ModItems {
     // 创建延迟寄存器保存在“portalgun”命名空间下注册的所有项目。
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, PortalGunMod.MODID);
     //注册物品 传送枪
     public static final RegistryObject<Item> PORTAL_GUN = ITEMS.register("portal_gun",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PORTALGUNMOD)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

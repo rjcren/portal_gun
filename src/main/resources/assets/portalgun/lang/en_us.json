@@ -1,3 +1,6 @@
 {
-  "item.portalgun.portal_gun": "portal gun"
+  "item.portalgun.portal_gun": "portal gun",
+
+  "block.portalgun.portal_block_1": "portal block one",
+  "block.portalgun.portal_block_2": "portal block two"
 }

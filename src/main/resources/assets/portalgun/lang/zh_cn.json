@@ -1,3 +1,7 @@
 {
-  "item.portalgun.portal_gun": "传送枪"
+  "item.portalgun.portal_gun": "传送枪",
+
+  "block.portalgun.portal_block_1": "一号传送块",
+  "block.portalgun.portal_block_2": "二号传送块"
+
 }

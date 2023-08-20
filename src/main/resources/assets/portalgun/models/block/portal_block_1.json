@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "layer0": "portalgun:block/portal_block_1"
+  }
+
+}

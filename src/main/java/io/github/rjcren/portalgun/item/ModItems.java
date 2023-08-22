@@ -1,17 +1,16 @@
-package io.github.rjcren.item;
+package io.github.rjcren.portalgun.item;
 
-import io.github.rjcren.PortalGunMod;
-import net.minecraft.world.item.CreativeModeTab;
+import io.github.rjcren.portalgun.PortalGunMod;
+import io.github.rjcren.portalgun.item.custom.PortalGun;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 /**
  * ClassName: ModItems
- * Package: io.github.rjcren.item
+ * Package: io.github.rjcren.portalgun.item
  * Description:
  *
  * @Author ren
@@ -19,15 +18,16 @@ import net.minecraftforge.registries.RegistryObject;
  */
 
 //物品类
-@Mod(PortalGunMod.MODID)
 public class ModItems {
-    // 创建延迟寄存器保存在“portalgun”命名空间下注册的所有项目。
+    //创建延迟寄存器保存在“portalgun”命名空间下注册的所有项目。
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, PortalGunMod.MODID);
-    //注册物品 传送枪
-    public static final RegistryObject<Item> PORTAL_GUN = ITEMS.register("portal_gun",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PORTALGUNMOD)));
 
+    //注册物品
+    public static final RegistryObject<Item> PORTAL_GUN = ITEMS.register("portal_gun",
+            () -> new PortalGun(new Item.Properties().tab(ModCreativeModeTab.PORTALGUNMOD).durability(100)));
+
+    //物品注册方法
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

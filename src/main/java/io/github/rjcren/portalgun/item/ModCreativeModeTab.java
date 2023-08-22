@@ -1,20 +1,18 @@
-package io.github.rjcren.item;
+package io.github.rjcren.portalgun.item;
 
-import io.github.rjcren.PortalGunMod;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.fml.common.Mod;
 
 /**
  * ClassName: ModCreativeModeTab
- * Package: io.github.rjcren.item
+ * Package: io.github.rjcren.portalgun.item
  * Description:
  *
  * @Author ren
  * @Create 2023/8/20 21:52
  */
 
-@Mod(PortalGunMod.MODID)
+//创建创造模式选项卡
 public class ModCreativeModeTab {
     public static final CreativeModeTab PORTALGUNMOD = new CreativeModeTab("portalgunmod") {
         @Override

@@ -1,10 +1,9 @@
-package io.github.rjcren;
+package io.github.rjcren.portalgun;
 
-import io.github.rjcren.item.ModItems;
+import io.github.rjcren.portalgun.item.ModItems;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -16,12 +15,13 @@ import net.minecraftforge.fml.common.Mod;
 /**
  * ClassName: EventHandling
  * Package: io.github.rjcren
- * Description:
+ * Description: 事件处理类
  *
  * @Author ren
  * @Create 2023/8/15 22:53
  */
 
+//事件处理类
 @Mod.EventBusSubscriber
 public class EventHandling {
     //测试用，手持传送枪右键可以传送

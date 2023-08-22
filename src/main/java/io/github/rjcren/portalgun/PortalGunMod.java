@@ -1,8 +1,7 @@
-package io.github.rjcren;
+package io.github.rjcren.portalgun;
 
-import io.github.rjcren.block.ModBlocks;
-import io.github.rjcren.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
+import io.github.rjcren.portalgun.block.ModBlocks;
+import io.github.rjcren.portalgun.item.ModItems;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -17,18 +16,16 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.stream.Collectors;
 
-// The value here should match an entry in the META-INF/mods.toml file
+
 @Mod(PortalGunMod.MODID)
 public class PortalGunMod
 {
-    // 定义mod id，以便所有内容引用
+    //定义modid，以便所有内容引用
     public static final String MODID = "portalgun";
     // 引用 log4j 记录器。
     private static final Logger LOGGER = LogManager.getLogger();
@@ -38,14 +35,14 @@ public class PortalGunMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
-
         eventBus.addListener(this::setup);
+
         // 注册用于修改加载的队列 IMC 方法
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         // 注册用于修改加载的进程 IMC 方法
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
 
-        // 注册我们感兴趣的服务器和其他游戏活动
+        // 注册服务器和其他游戏活动
         MinecraftForge.EVENT_BUS.register(this);
     }
 

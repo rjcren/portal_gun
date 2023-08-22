@@ -4,5 +4,10 @@
   "block.portalgun.portal_block_1": "一号传送块",
   "block.portalgun.portal_block_2": "二号传送块",
 
-  "itemGroup.portalgunmod": "传送枪"
+  "itemGroup.portalgunmod": "传送枪",
+
+  "tooltip.portalgun.portal_gun": "按§eSHIFT§r键查看更多",
+  "tooltip.portalgun.portal_gun.shift": "右键可轮流放置两种方块，踩中一种即可传送到另一种",
+  "tooltip.portalgun.portal_block_1": "踩上该传送块可传送至另一传送块",
+  "tooltip.portalgun.portal_block_2": "踩上该传送块可传送至另一传送块"
 }

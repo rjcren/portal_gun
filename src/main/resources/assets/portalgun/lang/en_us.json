@@ -4,5 +4,10 @@
   "block.portalgun.portal_block_1": "portal block one",
   "block.portalgun.portal_block_2": "portal block two",
 
-  "itemGroup.portalgunmod": "portal gun"
+  "itemGroup.portalgunmod": "portal gun",
+
+  "tooltip.portalgun.portal_gun": "press §eSHIFT§r for more information",
+  "tooltip.portalgun.portal_gun.shift": "right-click to place two types of blocks in turn, press one to teleport to the other",
+  "tooltip.portalgun.portal_block_1": "Step on the portal block to teleport to another portal block",
+  "tooltip.portalgun.portal_block_2": "Step on the portal block to teleport to another portal block"
 }

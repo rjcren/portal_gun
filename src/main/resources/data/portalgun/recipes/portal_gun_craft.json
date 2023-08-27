@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX ",
+    "XXX",
+    "  X"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:portal_gun"
+    }
+  },
+  "result": {
+    "item": "portalgun:portal_gun"
+  }
+}

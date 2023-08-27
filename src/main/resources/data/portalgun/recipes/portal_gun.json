@@ -2,12 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "XX ",
-    "XD#",
+    "PD#",
     "  #"
   ],
   "key": {
     "X": {
       "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "item": "minecraft:iron_block"
     },
     "D": {
       "item": "minecraft:diamond"

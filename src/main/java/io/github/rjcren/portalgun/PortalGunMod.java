@@ -2,6 +2,8 @@ package io.github.rjcren.portalgun;
 
 import io.github.rjcren.portalgun.block.ModBlocks;
 import io.github.rjcren.portalgun.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -36,6 +38,7 @@ public class PortalGunMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
 
         // 注册用于修改加载的队列 IMC 方法
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
@@ -44,6 +47,12 @@ public class PortalGunMod
 
         // 注册服务器和其他游戏活动
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void clientSetup(final FMLCommonSetupEvent event) {
+        //设置透明度，有透明部分的方块设置为cutout()（如门），半透明设置为translucent()（如玻璃）
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PORTAL_BLOCK_1.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PORTAL_BLOCK_2.get(), RenderType.translucent());
     }
 
     private void setup(final FMLCommonSetupEvent event)

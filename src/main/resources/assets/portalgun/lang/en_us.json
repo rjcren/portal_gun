@@ -1,5 +1,8 @@
 {
   "item.portalgun.portal_gun": "portal gun",
+  "item.portalgun.portal_gun_shard_white": "portal gun shard-white",
+  "item.portalgun.portal_gun_shard_black": "portal gun shard-black",
+  "item.portalgun.portal_gun.cooling": "portal gun cooling",
 
   "block.portalgun.portal_block_1": "portal block one",
   "block.portalgun.portal_block_2": "portal block two",

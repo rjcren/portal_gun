@@ -25,21 +25,20 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber
 public class EventHandling {
     //测试用，手持传送枪右键可以传送
-    @SubscribeEvent
-    public static void rightClick(PlayerInteractEvent.RightClickItem e) {
-        Player player = e.getPlayer();
-        Level level = player.level;
-
-        //获取玩家手中物品
-        ItemStack itemStack = e.getItemStack();
-        Item item = itemStack.getItem();
-        if (item == ModItems.PORTAL_GUN.get()) {
-            //获取玩家准星对准，参数为：准星延伸的距离、？、是否穿透流体
-            HitResult hitResult = player.pick(20, 0, false);
-            //获取准星对准位置
-            Vec3 location = hitResult.getLocation();
-            //传送玩家至该位置
-            player.teleportTo(location.x, location.y, location.z);
-        }
-    }
+//    @SubscribeEvent
+//    public static void rightClick(PlayerInteractEvent.RightClickItem e) {
+//        Player player = e.getPlayer();
+//
+//        //获取玩家手中物品
+//        ItemStack itemStack = e.getItemStack();
+//        Item item = itemStack.getItem();
+//        if (item == ModItems.PORTAL_GUN.get()) {
+//            //获取玩家准星对准，参数为：准星延伸的距离、？、是否穿透流体
+//            HitResult hitResult = player.pick(20, 0, false);
+//            //获取准星对准位置
+//            Vec3 location = hitResult.getLocation();
+//            //传送玩家至该位置
+//            player.teleportTo(location.x, location.y, location.z);
+//        }
+//    }
 }

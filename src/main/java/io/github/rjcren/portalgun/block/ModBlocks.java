@@ -42,18 +42,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> PORTAL_BLOCK_2 = registryBlock("portal_block_2",
             () -> new PortalBlock2(BlockBehaviour.Properties.of(Material.PORTAL).strength(0)), ModCreativeModeTab.PORTALGUNMOD, "tooltip.portalgun.portal_block_2");
 
-    //注册方块
+    //注册方块方法
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registryBlockItem(name, toReturn, tab);
         return toReturn;
     }
-    //绑定物品与方块
+    //绑定物品与方块方法
     private static <T extends Block> RegistryObject<Item> registryBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 
-    //带方块说明的方法
+    //带方块描述的方法
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block, CreativeModeTab tab, String tooltipkey) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registryBlockItem(name, toReturn, tab, tooltipkey);
